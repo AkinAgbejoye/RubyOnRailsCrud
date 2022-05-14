@@ -1,0 +1,22 @@
+
+<table class="table table-borderless table-striped">
+    <thead class="table-dark">
+      <tr>
+        <td>First name:</td>
+        <td>Last name:</td>
+        <td>Email:</td>
+        <td>Phonenumber:</td>
+        <td>Twitter:</td>
+        <td colspan="3"></td>
+      </tr>
+    </thead>
+    <tbody>
+<%= render @friend %>
+ </tbody>
+</table>
+<div>
+  <%= link_to "Edit", edit_friend_path(@friend),class:"btn btn-secondary" %> 
+  <%= link_to "Back", friends_path,class:"btn btn-dark" %>
+ <br/><br/>
+  <%= button_to "Destroy this friend", @friend, method: :delete,class:'btn btn-secondary' %>
+</div>
