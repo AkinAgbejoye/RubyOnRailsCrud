@@ -4,20 +4,19 @@
 	<table class="table table-borderless table-striped">
     <thead class="table-dark">
       <tr>
-        <td>First name:</td>
-        <td>Last name:</td>
+        <td>Name:</td>
         <td>Email:</td>
         <td>Phonenumber:</td>
         <td>Twitter:</td>
-        <td colspan="3"></td>
       </tr>
     </thead>
     <tbody>
   <% @friends.each do |friend| %>
+  <% if friend.user == current_user %>
     <%= render friend %>
    
       
-    
+   <% end %> 
   <% end %>
   </tbody>
 </table>
